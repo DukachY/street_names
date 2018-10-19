@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Interactive map with street names </title>
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+              integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+              crossorigin=""/>
+        
+        <link href="style.css" rel = stylesheet>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+                integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+                crossorigin=""></script>
+        
+    </head>
+    
+    
+    
+    
+    
+    <body>
+        <div class='background'>
+        
+<!-- HEADER -->
+            <div id="header">
+                <div class='container-fluid alp'>
+                    <div class="box h-100 d-flex justify-content-end flex-column">
+                        <h1 class='myh1'>НА ЧИЮ ЧЕСТЬ НАЗВАНІ ВУЛИЦІ УКРАЇНИ?</h1>
+                        <p class="epigraph"><em>“В якому місті немає 1-ї Садової, 2-ї Заміськьої, 3-ї Фабричної, <br>1-ї Паркової, 2-ї Індустріальної, 3-ї вулиці Будівельників!”<br>(із к/ф “Іронія долі, або З легкою парою!”)</em></p>
+                    </div>
+                </div>
+            </div>
+
+            
+<!--    INTRO    -->
+
+            <div class="container" style="margin-bottom: 0;">
+                <div class="row">
+                    <div class='sub-header'>
+                        <div class="credits text">
+                            <p>Над проектом працювала: <b>Юлія Дукач</b><br>Опубліковано: <b style='color:red;'>?? жовтня 2018 року</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class='main-text'> 
+                
+                <div class="container intro">
+                    <div class="row">
+                        <div class="col-6 offset-md-3">
+                            <p>В 2012 році на сайті Текстів вийшов проект <a href = "http://texty.org.ua/pg/article/devrand/read/37123/20_rokiv_Nezalezhnosti_Lenin_vse_nijak_ne" class="mylink">“20 років Незалежності: Лєнін все ніяк не Goodbye!”</a>, де ми побачили, що частіше за все місцеві органи влади знаходились на вулиці Леніна.</p>
+                            <p>Після двадцять сьомої річниці Незалежності в містах України Леніна вже не знайти. Але хто тепер займає лідерські позиції і скільки серед них представників радянської епохи? </p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+<!--    MAIN TEXT    -->
+
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/pop.str.10.png' alt='10 найпопулярніших вулиць України'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Загалом в містах та селищах міського типу, розташованих на підконтрольних українських територіях, більше 85 тисяч вулиць і 18 тисяч оригінальних назв.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-5 offset-md-1">
+                            <div class='mytable'>
+                                <table class="table" id="ros-ukr-table"> 
+                                    <tr>
+                                        <th scope="col" style="text-align: right;">Найпопулярніші вулиці<br>Росії</th>
+                                        <th class="num" style="vertical-align: middle;">№</th>
+                                        <th scope="col">Найпопулярніші вулиці<br>України</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">Центральная</td>
+                                        <td class="num"> 1 </td>
+                                        <td class='common n1'>Садова</td>
+                                    </tr>
+                                    <tr>
+                                        <td class='common n2' style="text-align: right;">Молодежная</td>
+                                        <td class="num"> 2 </td>
+                                        <td>Шевченка</td>
+                                    </tr>
+                                    <tr>
+                                        <td class='common n3' style="text-align: right;">Лесная</td>
+                                        <td class="num"> 3 </td>
+                                        <td>Миру</td>
+                                    </tr>
+                                    <tr>
+                                        <td class='common n4' style="text-align: right;">Школьная</td>
+                                        <td class="num"> 4 </td>
+                                        <td class='common n4'>Шкільна</td>
+                                    </tr>
+                                    <tr>
+                                        <td class='common n1' style="text-align: right;">Садовая</td>
+                                        <td class="num"> 5 </td>
+                                        <td class='common n2'>Молодіжна</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">Новая</td>
+                                        <td class="num"> 6 </td>
+                                        <td>Гагаріна</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">Советская</td>
+                                        <td class="num"> 7 </td>
+                                        <td class='common n3'>Лісова</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">Набережная</td>
+                                        <td class="num"> 8 </td>
+                                        <td>Пушкіна</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">Заречная</td>
+                                        <td class="num"> 9 </td>
+                                        <td>Лесі Українки</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">Полевая</td>
+                                        <td class="num"> 10 </td>
+                                        <td>1 Травня</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-3 offset-md-2">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Якщо порівнювати зі схожим дослідженням в Росії, деякі їх “лідери прописок” повторюються і у нас.</p>
+                                <p>Проте українські міста більш насичені іменними вулицями.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/ukr-ger.png' alt='Іменні вулиці в Україні та Німеччині' style="margin-left: 5%;">
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Звичка увічнювати людей в назвах тягнеться в Україні з радянського минулого і до сьогодні. З такою своєю любов'ю до "видатних" особистостей ми випереджаємо Німеччину майже вдвічі. Проте чи завжди ці особистості "видатні"? Лишається невідомим.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/pop25.png' alt='25 найпопулярніших іменних вулиць'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Серед 25 найпопулярніших прізвищ українців менше половини. Популярними залишаються не тільки російські (радянські) діячі науки та культури, але і військові.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/rus.names.png' alt='Українські та російські іменні вулиці на капрті України'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Перелічених українських діячів легше знайти на картах міст заходу країни. А російські "звичніші" жителям сходу.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/geo.rus.png' alt='Російські міста на карті України'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Російські міста та регіони також часто з’являються на карті України. </p>
+                                <p>Безперечне лідерство має вулиця “Московська” (нарахували 110 назв), одразу за нею - Бєлгородська (35), Волгоградська (26) та Ростовська (24).</p> 
+                                <p>Ці назви з’являються переважно в обласних центрах східного регіону. Лише в Тернопільській області їх немає зовсім.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-5 offset-md-1">
+                            <div class='mytable'>
+                                <table class="table">
+                                    <tr class="for-hover">
+                                        <th scope="col" class="num">Номер в списку</th>
+                                        <th scope="col" style="text-align:center; vertical-align: middle;">Ім'я</th>
+                                        <th scope="col" class="num">Кількість на карті України</th>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">4</td>
+                                        <td>Лесі Українки</td>
+                                        <td class="num">587</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">38</td>
+                                        <td>Зоі Космодем'янської</td>
+                                        <td class="num">137</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">49</td>
+                                        <td>Ольги Кобилянської</td>
+                                        <td class="num">108</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">81</td>
+                                        <td>Валентини<br>Терешкової</td>
+                                        <td class="num">71</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">89</td>
+                                        <td>Соломії<br>Крушельницької</td>
+                                        <td class="num">66</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">93</td>
+                                        <td>Лізи Чайкіної</td>
+                                        <td class="num">64</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">98</td>
+                                        <td>Княгині Ольги</td>
+                                        <td class="num">59</td>
+                                    </tr>
+                                    <tr class="for-hover">
+                                        <td class="num">100</td>
+                                        <td>Марії Заньковецької</td>
+                                        <td class="num">56</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-3 offset-md-2">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Абсолютна більшість іменних вулиць в Україні названа на честь чоловіків.</p>
+                                <p>Зі 100 найпопулярніших імен на карті України, лише 8 належать жінкам.</p>
+                                <p>Три з них (Космодем’янська, Терешкова, Чайкіна) – постаті радянської військово-патріотичної пропаганди.</p> 
+                                <p>А Валентина Терешкова сьогодні також є депутатом Державної думи Російської Федерації.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/iconmatrix_female.png' alt='Частка жіночих вулиць серед всіх іменних'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Зі 100 найпопулярніших імен жіночих 8, але якщо взяти всі іменні вулиці країни, відсоток жіночих прізвищ серед них буде ще менше.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/female.png' alt='Жіночі вулиці на карті України'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Трохи більше жіночих прізвищ можна побачити на карті в західному регіоні та в Полтавській і Сумській областях. Найбільш чоловічою виявилась Херсонська область – в ній із 800 іменних вулиць лише 33 носять жіноче ім’я (8 з яких - ім’я Лесі Українки).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/authentic.png' alt='Автентичні вулиці України'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>В кожній області є свої герої та місцеві традиції.</p>
+                                <p>Так, наприклад, 75% від всіх вулиць Культури розташовані в Харківській області, а 77% Чарівних вулиць – в Запорізькій.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class='container-fluid text'>
+                    <div class="row">
+                        <div class="col">
+                            <img src='img/calendar.png' alt='Найпоширеніші дати в назвах вулиць'>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container text">
+                    <div class='row'>
+                        <div class="col">
+                            <p>На карті України також є вулиці, названі на честь <span class='comment no1'>пам’ятних дат*.</span></p>
+                            <p>Незважаючи на абсолютну першість 1 травня та 8 березня, на карті України є ще 68 інших дат (19% від всіх днів року).</p>
+                            <p>Більше за все відзначених дат у вересні (18 із 30 днів нанесені на карту). Менше за все – в червні (один лише День Конституції)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+
+                <div class='container-fluid text'>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/pop.plants.png' alt='Найпопулярніші рослинні вулиці'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Звірів на карті України майже немає, а от рослинам приділяється багато уваги.</p>
+                                <p>Перші чотири рядки рейтингу популярності займають плодоносні рослини.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-8">
+                            <img src='img/plants.png' alt='Рослинні вулиці на карті України'>
+                        </div>
+                        <div class="col-3">
+                            <div class="box h-100 d-flex justify-content-center flex-column">
+                                <p>Таких назв більше в східному регіоні країни.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                
+                <div class='container text'>
+                    <div class='row'>
+                        <div class="col">
+                            <p></p>
+                            <p>Незважаючи на 18 тисяч різних назв, більшість міст залишаються далекими від оригінальності та обирають “найпопулярніші” варіанти. Так, наприклад, 50 найпопулярніших назв вичерпують 25% від всієї кількості вулиць України.</p>
+                            <p>Щоб самостійно переконатись в цьому – введіть назву вулиці, на якій живете, щоб побачити, в яких ще містах є такі самі адреси.</p>
+                            <p>На карті нижче представлені міста, в яких є вулиця <span class='map-header'></span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            
+            
+
+    <!--   MAP   -->
+
+            <div id = "mapScreen">
+                <div id="mapid"></div>
+                <div id="mapPanel">
+                    <div id="streets-list" class='comment no2'>
+                        <input class="typeahead" type="text" placeholder="Введіть назву вулиці">
+                        <div class="note-about-data">
+                            <p>Джерело даних - <a href="https://ukrposhta.ua/ru/dovidnik-poshtovix-adre/opis/" class="mylink">Довідник поштових адрес Укрпошти</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- All scripts -->
+
+            <script type="text/javascript" src="lib/d3.js"></script>
+            <script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+            
+
+            <!-- Bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+            
+            <!-- Typeahead -->
+            <script type="text/javascript" src="lib/typeahead.jquery.js"></script>
+            <script type="text/javascript" src="lib/typeahead.bundle.js"></script>
+
+            
+            <!-- My scripts -->
+
+            <script type="text/javascript" src="map.js"></script>
+        
+            
+            <!-- HOVER COMMENTS TO TEXT -->
+            
+            <script>
+                $("span.comment.no1").hover(
+                    function() {
+                        $( this ).append( $("<p class=\"my-comment1\">Результати стосуються вулиць, назва яких включає день та місяць (напр. <i>“Першотравнева”</i> або <i>“16 Липня”</i>).<br>Вулиці на кшталт <i>“Новорічна”</i> або <i>“Дня Незалежності”</i> до цієї категорії включені не були.</p>"));
+                    }, function() {
+                        $( this ).find("p:last").remove();
+                    }
+                );
+            </script>
+            
+            <script>
+                $("div.comment.no2").hover(
+                    function() {
+                        $( this ).append( $("<p class=\"my-comment2\">Ми об’єднували однакові за змістом популярні назви, видаляючи “зайві” елементи. Тому іменні вулиці краще шукати за прізвищем <i>(не “ім. Т.Г. Шевченка”, а “Шевченка”)</i>, а нейтральні – без використання додаткових префіксів <i>(не “Новомолодіжна”, а “Молодіжна”)</i></p>"));
+                    }, function() {
+                        $( this ).find("p:last").remove();
+                    }
+                );
+            </script>
+            
+            
+            <!-- HOVER STYLES FOR TABLES -->
+            
+            <!--  for females   -->
+            <script>
+            $("tr.for-hover").hover(
+                function() {
+                    $(this).addClass("hover");
+                }, function() {
+                    $(this).removeClass("hover");
+                }
+            );
+            </script>
+            
+            <!--  for ros-ukr popular streets   -->
+            <script>
+            $("td.common").hover(
+                function() {
+                    if($(this).hasClass('common n1') === true)
+                    $('td.common.n1').addClass("common-hover");
+                    if($(this).hasClass('common n2') === true)
+                    $('td.common.n2').addClass("common-hover");
+                    if($(this).hasClass('common n3') === true)
+                    $('td.common.n3').addClass("common-hover");
+                    if($(this).hasClass('common n4') === true)
+                    $('td.common.n4').addClass("common-hover");
+                }, function() {
+                    $('td').removeClass("common-hover");
+                }
+            );
+            </script>
+            
+            
+            
+        </div>
+    </body>
+</html>

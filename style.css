@@ -1,0 +1,269 @@
+html *
+{
+    font-family: "Open Sans" !important;
+}
+
+
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+    width: 100%;
+}
+
+.background {
+    background-color: #FFFFFF;
+}
+
+#header .container-fluid {
+    height: 100vh;
+    background-image: url(img/fon.png); 
+    background-size: cover;
+    margin: 0 !important;
+    line-height: 100px;
+}
+
+h1.myh1 {
+    color: #4358A3;
+    font-size: 40px;
+    line-height: 1.7em;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 5%;
+    letter-spacing: 0.03em;
+}
+
+
+.epigraph {
+    text-align: right;
+    line-height: 1.7em;
+    color: #4358A3;
+    padding-right: 5%;
+}
+
+
+.credits > p {
+    text-align: left;
+    color: #6E6E6E;
+    font-size: 0.9em;
+    margin-top: 5%;
+}
+
+.intro {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.container.text {
+    margin-bottom: 2%;
+}
+
+
+p {
+    color: #6E6E6E;
+    font-size: 1.3em;
+}
+
+a.mylink {
+    color: #4358A3;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a.mylink:hover {
+    color: #5C75D2;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+.comment {
+    cursor: default;
+    font-weight: bold;
+    color: #4358A3;
+}
+
+.my-comment1 {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #5C75D2;
+    padding-top: 1%;
+}
+
+.my-comment2 {
+    font-size: 0.95em;
+    font-weight: 300;
+    color: #5C75D2;
+    margin: 2%;
+    padding-right: 15%;
+}
+
+div.note-about-data {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+div.note-about-data p{
+    font-weight: 100;
+    font-size: 0.85em;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+
+
+
+/* ========== TABLE ========== */
+
+.hover{
+    background-color: #5C75D2;
+    font-weight: 700;
+    color: white;
+}
+
+.common-hover {
+    background-color: #5C75D2;
+    font-weight: 700;
+    color: white !important;
+}
+
+td.common {
+    font-weight: 800;
+    color: #5C75D2; 
+}
+
+#ros-ukr-table .num {
+    font-weight: 900;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.num {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+/* ========== MAP ========== */
+
+
+/* id styles */
+
+#mapScreen {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#mapid { 
+    height: 700px; 
+    width: 70%;
+    margin-left: 7%;
+}
+
+#mapPanel {
+    width: 30%;
+    display: flex;
+}
+
+/* поле зліва */
+
+
+#streets-list {
+    margin: 2%;
+    width: 100%;
+    position: relative;
+}
+
+.map-header {
+    font-weight: bold;
+    color: #5C75D2;
+}
+
+
+
+.twitter-typeahead {
+    width: 100%;
+    margin: 2%;
+}
+
+/*поля для вписування назви вулиці*/
+
+
+.typeahead,
+.tt-input {
+	display: block;
+	width: 70%;
+	height: 40px;
+	padding: 3px 2%;
+	font-size: 1.1em;
+	line-height: 1.4;
+	color: black;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+}
+
+
+/*список, що розкривається*/
+tt-open,
+.tt-menu {
+    width: 70%;
+	margin-top: 2px;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 2px;
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	background-clip: padding-box;
+    -webkit-border-radius: 5px;
+
+
+}
+
+.tt-sugestion,
+.tt-selectable {
+    margin-bottom: 2px;
+    color: black;
+    font-size: 1.1em;
+	padding: 2px 3%;
+}
+
+
+.tt-selectable:hover{
+    background-color: #5C75D2;
+    color: #fff;
+}
+
+.tt-suggestion.tt-cursor {
+	color: #fff;
+	background-color: #5C75D2;
+}
+
+
+/* Leaflet popup */
+
+.leaflet-popup-content {
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.leaflet-popup-content-wrapper {
+    opacity: 0.85;
+    background-color: white;
+}
+
+.leaflet-popup-tip {
+    opacity: 0.85;
+    background-color: white;
+}
+
+
