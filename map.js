@@ -38,7 +38,7 @@ d3.csv('data/streetsmap.csv')
 
     
     // select street name that will be shown first
-    var choice = 'Лесі Українки';
+    var choice = 'Калинова';
     
     // Show name of the street!!!!
     d3.select('span.map-header').append('text').text('\"' + choice + '\"')
