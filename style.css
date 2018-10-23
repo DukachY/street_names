@@ -18,8 +18,9 @@ body {
 #header  {
     background-image: url(img/sadova.jpg);
     height: 950px;
+    width: 100%;
 /*    height: 100vh;*/
-/*    background-size: 100% 100%;*/
+    background-size: 100% 100%;
 }
 
 
