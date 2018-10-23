@@ -17,7 +17,8 @@ body {
 
 #header  {
     background-image: url(img/sadova.jpg);
-    height: 100vh;
+    height: 990px;
+/*    height: 100vh;*/
     background-size: 100% 100%;
 }
 
@@ -43,9 +44,11 @@ svg.cover {
 
 /*for small screens*/
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) and (min-device-width: 300px) and (orientation: portrait) {
+/*
     #header {
         height: 50vh;
     }
+*/
     div.socicon {
         width: 3em;
     }
