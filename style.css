@@ -14,15 +14,41 @@ body {
 }
 
 
-
 #header  {
-    background-image: url(img/sadova.jpg);
-/*
-    height: 950px;
-    width: 100%;
-*/
+    background-image: url(img/sadova.png);
+    background-size: cover;
+    margin: 0 !important;
     height: 100vh;
-    background-size: 100% 100%;
+}
+
+
+.vertical-center{
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+}
+
+h1.myh1 {
+    color: white;
+    font-size: 3em;
+    line-height: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+
+.text1 {
+    line-height: 1.7em;
+    color: #F08396;
+}
+
+
+.text2 {
+    line-height: 1.7em;
+    color: white;
+    font-style: italic;
 }
 
 
@@ -56,6 +82,9 @@ svg.cover {
 
     svg.cover {
         height: 2em;
+    }
+    .vertical-center{
+        top: 30%;
     }
 }
 
