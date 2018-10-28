@@ -24,10 +24,11 @@ body {
 
 .vertical-center{
     position: absolute;
-    top: 70%;
+    bottom: 0;
+/*    top: 70%;*/
     left: 3%;
-    transform: translate(0%, -50%);
-    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -10%);
+    -webkit-transform: translate(0%, -10%);
 }
 
 h1.myh1 {
@@ -83,8 +84,10 @@ svg.cover {
     svg.cover {
         height: 2em;
     }
-    .vertical-center{
-        top: 30%;
+   .vertical-center{
+        top: 40%;
+        transform: translate(0%, -30%);
+        -webkit-transform: translate(0%, -30%);
     }
 }
 
