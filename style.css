@@ -32,23 +32,30 @@ body {
 }
 
 h1.myh1 {
+    font-family: "Open Sans" !important;
     color: white;
     font-size: 3em;
-    line-height: 1.5em;
+    line-height: 1.3em;
     font-weight: 600;
     letter-spacing: 0.03em;
 }
 
 
 .text1 {
-    line-height: 1.7em;
-    color: #F08396;
+    font-family: "Open Sans" !important;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: white;
+    margin-bottom: 0.5rem;
+/*    color: #F08396;*/
 }
 
 
 .text2 {
-    line-height: 1.7em;
+    font-family: "Open Sans" !important;
+    line-height: 1.5em;
     color: white;
+    font-size: 1.2em;
     font-style: italic;
 }
 
