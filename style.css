@@ -179,6 +179,12 @@ div.note-about-data p{
 
 /* ========== TABLE ========== */
 
+table caption {
+    caption-side: top;
+    text-align: center;
+    font-weight: 700;
+}
+
 .hover{
     background-color: #5C75D2;
     color: white;
@@ -205,7 +211,6 @@ td.common {
     text-align: center;
     vertical-align: middle;
 }
-
 
 
 
